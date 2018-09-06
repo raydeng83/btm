@@ -1,0 +1,21 @@
+<section id="main-demo" class="main-layout gap primary-bg">
+    <div class="container">
+        <div class="section-header text-center">
+            <h1>AngLand - Angular 6 Material Landing Page</h1>
+        </div>
+        <div fxLayout="row" fxLayout.lt-md="column" fxLayoutWrap="nowrap" fxLayoutGap="30px">
+            <div fxFlex="50">
+                <mat-card matRipple [routerLink]="'/layout/one'">
+                    <h4 class="m-0">Demo1</h4>
+                    <img mat-card-image class="m-0" src="assets/images/demo1.jpg">
+                </mat-card>
+            </div>
+            <div fxFlex="50">
+                <mat-card [routerLink]="'/layout/two'">
+                    <h4 class="m-0">Demo 2 </h4>
+                    <img mat-card-image class="m-0" src="assets/images/demo2.jpg">
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,10 @@
+.service-card-two {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+@media(min-width:600px) {
+    .service-card-two {
+        padding: 2rem;
+    }
+}

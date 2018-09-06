@@ -1,0 +1,46 @@
+<section id="contact-section" class="gap bg-grey">
+    <div class="container">
+        <div fxLayout='column' class="text-center mb-5">
+            <div fxFlex.gt-md="60%">
+                <h2 class="title-page">Write Us A Line</h2>
+                <p class="lead w-60"> Consectetur adipisicing elit. Velit id error rem qui. Neque aperiam saepe placeat vero reprehenderit. </p>
+            </div>
+        </div>
+        <form [formGroup]="contactForm">
+            <div fxLayout="row" fxLayout.lt-md="column" fxLayoutWrap="wrap">
+                <div fxFlex="100">
+                    <div class="pb-1">
+                        <mat-form-field class="full-width">
+                            <input matInput name="name" [formControl]="contactForm.controls['name']" placeholder="Your Name">
+                        </mat-form-field>
+                        <small *ngIf="contactForm.controls.name.touched && contactForm.controls.name.errors?.required" class="form-error-msg">*Required</small>
+                    </div>
+                    <div class="pb-1">
+                        <mat-form-field class="full-width">
+                            <input matInput name="email" [formControl]="contactForm.controls['email']" placeholder="Your Email">
+                        </mat-form-field>
+                        <small *ngIf="contactForm.controls.email.touched && contactForm.controls.email.errors?.email" class="form-error-msg">*Invalid Address</small>
+                    </div>
+
+                </div>
+                <div fxFlex="100">
+                    <div class="pb-1">
+                        <mat-form-field class="full-width">
+                            <input matInput name="subject" [formControl]="contactForm.controls['subject']" placeholder="Subject">
+                        </mat-form-field>
+                        <small *ngIf="contactForm.controls.subject.touched && contactForm.controls.subject.errors?.required" class="form-error-msg">*Required</small>
+                    </div>
+                    <div class="pb-1">
+                        <mat-form-field class="full-width">
+                            <textarea matInput row="8" name="message" [formControl]="contactForm.controls['message']" placeholder="Message"></textarea>
+                        </mat-form-field>
+                        <small *ngIf="contactForm.controls.message.touched && contactForm.controls.message.errors?.required" class="form-error-msg">*Required</small>
+                    </div>
+                </div>
+
+                <div fxFlex="100"> <button mat-raised-button mat-lg-button color="accent">Send Us</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

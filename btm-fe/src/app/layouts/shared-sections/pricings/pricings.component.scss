@@ -1,0 +1,13 @@
+.plan-pricing .mat-list-item ::ng-deep .mat-list-item-content {
+    display: inline-flex !important;
+    text-align: center;
+    font-size: .875rem !important;
+}
+
+.plan-pricing {
+    background: #3f51b5;
+    color: #fff;
+    p {
+        color: #fff;
+    }
+}

@@ -1,0 +1,26 @@
+<section id="testimonial-slider" class="testimonials-section gap primary-bg">
+  <div class="container">
+      <div fxLayout='column' class="text-center mb-5 white-color">
+          <div fxFlex.gt-md="60%">
+              <h2 class="title-page">What our customers says</h2>
+              <p class="lead w-60"> Consectetur adipisicing elit. Velit id error rem qui. Neque aperiam saepe placeat vero reprehenderit. </p>
+          </div>
+      </div>
+      <div fxLayout="row" fxLayoutWrap="wrap row" fxLayoutAlign="center center">
+          <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="70" fxFlex.lg="60" fxFlex.xl="100">
+      <div fxFlex="100" *ngFor="let tm of testimonials">
+          <mat-card class="p-0">
+              <mat-card-content class="text-center">
+                  <div class="user-content">
+                      <div class="testimonial-img"><img [src]="tm.photo" alt=""></div>
+                      <p class="text">{{tm.text}}</p>
+                      <div class="user-title">{{tm.title}}</div>
+                      <div class="user-subtitle text-muted">{{tm.subtitle}}</div>
+                  </div>
+              </mat-card-content>
+          </mat-card>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
