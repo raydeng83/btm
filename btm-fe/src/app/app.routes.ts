@@ -1,22 +1,16 @@
 import { Routes } from '@angular/router';
+import { HomeComponent } from './layouts/home/home.component';
+
 
 export const rootRouterConfig: Routes = [
   { 
     path: '', 
-    redirectTo: 'demos', 
+    redirectTo: 'home', 
     pathMatch: 'full' 
   },
   { 
-    path: 'demos', 
-    loadChildren: './main/main.module#DemoModule'
-  },
-  { 
-    path: 'layout', 
-    loadChildren: './layouts/layout.module#LayoutModule'
-  },
-  { 
-    path: '**', 
-    redirectTo: 'layout/one'
+    path: 'home', 
+    component: HomeComponent
   }
 ];
 
