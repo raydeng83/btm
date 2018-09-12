@@ -19,7 +19,8 @@ import {
   MatRippleModule,
   MatSlideToggleModule,
   MatSnackBarModule,
-  MatTabsModule
+  MatTabsModule,
+  MatStepperModule
  } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { NguCarouselModule } from '@ngu/carousel';
@@ -40,6 +41,7 @@ import { ServicesCarouselComponent } from './layouts/services-carousel/services-
 
 import { WINDOW_PROVIDERS } from './shared/helpers/window.helper';
 import { HomeComponent } from './layouts/home/home.component';
+import { WorkflowComponent } from './layouts/workflow/workflow.component';
 
 @NgModule({
   imports: [
@@ -64,6 +66,7 @@ import { HomeComponent } from './layouts/home/home.component';
     MatTabsModule,
     FlexLayoutModule,
     NguCarouselModule,
+    MatStepperModule,
     RouterModule.forRoot(rootRouterConfig, { useHash: false })
   ],
   declarations: [
@@ -81,7 +84,7 @@ import { HomeComponent } from './layouts/home/home.component';
     PortfolioCarouselComponent,  
     TestimonialsCarouselComponent, 
     ServicesCarouselComponent, 
-    HomeComponent
+    HomeComponent, WorkflowComponent
   ],
   providers: [WINDOW_PROVIDERS],
   bootstrap: [AppComponent]
