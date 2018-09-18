@@ -67,7 +67,7 @@ import { WorkflowComponent } from './layouts/workflow/workflow.component';
     FlexLayoutModule,
     NguCarouselModule,
     MatStepperModule,
-    RouterModule.forRoot(rootRouterConfig, { useHash: false })
+    RouterModule.forRoot(rootRouterConfig, { useHash: true })
   ],
   declarations: [
     AppComponent,
