@@ -10,45 +10,39 @@
 			<div fxFlex.xs="200" fxFlex.sm="200" fxFlex.md="140" fxFlex.lg="120" fxFlex.xl="200">
 					<mat-card class="p-0">
 						<mat-card-content class="text-center">
-							<!-- <div class="user-content">
-								<div class="testimonial-img"><img [src]="tm.photo" alt=""></div>
-								<p class="text">{{tm.text}}</p>
-								<div class="user-title">{{tm.title}}</div>
-								<div class="user-subtitle text-muted">{{tm.subtitle}}</div>
-							</div> -->
 							<mat-horizontal-stepper #stepper>
 							  <mat-step [stepControl]="formGroup">
-							      <ng-template matStepLabel>咨询</ng-template>
+							      <ng-template matStepLabel>沟通咨询</ng-template>
 							      <mat-card class="example-card">
 									  <mat-card-header>
 									    <div mat-card-avatar class="example-header-image"></div>
-									    <mat-card-title>第一步：咨询</mat-card-title>
+									    <mat-card-title>第一步: 沟通咨询</mat-card-title>
 									  </mat-card-header>
+									  <mat-card-content style="text-align: left;">
+									    <p>
+									      在与您取得联系后，我们将立即指派专员收集客户病情信息，同时介绍我们所能够提供的各项服务。
+									    </p>
+									  </mat-card-content>
 									  <img mat-card-image src="assets/images/workflow-1.jpg">
-									  <mat-card-content>
-									    <p>
-									      为客户提供初期咨询的服务，对客户的情况有一个综合的了解，同事也让客户更好的了解我们以及我们所提供的服务。
-									    </p>
-									  </mat-card-content>
 									</mat-card>
 							      <br>
 							      <div style="float:right;">
-							        <button mat-button matStepperNext>下一步 <i class="material-icons">navigate_next</i></button>
+							        <button mat-button matStepperNext>下一步<i class="material-icons">navigate_next</i></button>
 							      </div>
 							  </mat-step>
 							   <mat-step [stepControl]="formGroup">
-							      <ng-template matStepLabel>问诊和翻译病历</ng-template>
+							      <ng-template matStepLabel>整理病历</ng-template>
 							      <mat-card class="example-card">
 									  <mat-card-header>
 									    <div mat-card-avatar class="example-header-image"></div>
-									    <mat-card-title>第二步：问诊和翻译病历</mat-card-title>
+									    <mat-card-title>第二步：整理病历</mat-card-title>
 									  </mat-card-header>
+									  <mat-card-content style="text-align: left;">
+										  <p>
+											  在征得您的同意后，我们将指派唯一专员系统性的收集、整理并翻译您的病历，保障您的隐私。
+										  </p>
+									  </mat-card-content>
 									  <img mat-card-image src="assets/images/workflow-2.jpg">
-									  <mat-card-content>
-									    <p>
-									      在初步掌握了客户的情况之后，我们会做进一步的分析和研究，确认病情具体的情况。同时在这一阶段也会有许多文案翻译类的工作。
-									    </p>
-									  </mat-card-content>
 									</mat-card>
 							      <br>
 							      <div style="float:left;">
@@ -59,40 +53,40 @@
 							      </div>
 							  </mat-step>
 							   <mat-step [stepControl]="formGroup">
-							    <ng-template matStepLabel>邀请赴美</ng-template>
-							      <mat-card class="example-card">
-									  <mat-card-header>
-									    <div mat-card-avatar class="example-header-image"></div>
-									    <mat-card-title>第三步：邀请赴美</mat-card-title>
-									  </mat-card-header>
-									  <img mat-card-image src="assets/images/workflow-3.jpg">
-									  <mat-card-content>
-									    <p>
-									      在确定了所有情况和客户意愿之后，我们会发送赴美邀请。在这个过程中我们会继续辅助客户办理赴美手续。
-									    </p>
-									  </mat-card-content>
-									</mat-card>
-							      <br>
-							      <div style="float:left;">
-							      	<button mat-button matStepperPrevious><i class="material-icons">navigate_before</i>上一步</button>
-							      </div>
-							      <div style="float:right;">
-							        <button mat-button matStepperNext>下一步 <i class="material-icons">navigate_next</i></button>
-							      </div>
-							  </mat-step>
-							  <mat-step [stepControl]="formGroup">
 							    <ng-template matStepLabel>预约专家</ng-template>
 							      <mat-card class="example-card">
 									  <mat-card-header>
 									    <div mat-card-avatar class="example-header-image"></div>
-									    <mat-card-title>第四步：预约专家</mat-card-title>
+									    <mat-card-title>第三步：预约专家</mat-card-title>
 									  </mat-card-header>
-									  <img mat-card-image src="assets/images/workflow-4.jpg">
-									  <mat-card-content>
-									    <p>
-									      在赴美日程确定之后，我们便立即开始预约最适合客户情况的专家。
-									    </p>
+									  <mat-card-content style="text-align: left;">
+										  <p>
+											  在您决定赴美就医后，我们会要求医院出具医疗邀请函，医生预约信以及费用预估单。
+										  </p>
 									  </mat-card-content>
+									  <img mat-card-image src="assets/images/workflow-4.jpg">
+									</mat-card>
+							      <br>
+							      <div style="float:left;">
+							      	<button mat-button matStepperPrevious><i class="material-icons">navigate_before</i>上一步</button>
+							      </div>
+							      <div style="float:right;">
+							        <button mat-button matStepperNext>下一步 <i class="material-icons">navigate_next</i></button>
+							      </div>
+							  </mat-step>
+							  <mat-step [stepControl]="formGroup">
+							    <ng-template matStepLabel>办理签证</ng-template>
+							      <mat-card class="example-card">
+									  <mat-card-header>
+									    <div mat-card-avatar class="example-header-image"></div>
+									    <mat-card-title>第四步：办理签证</mat-card-title>
+									  </mat-card-header>
+									  <mat-card-content style="text-align: left;">
+										  <p>
+											  我们会继续协助您办理赴美医疗签证。
+										  </p>
+									  </mat-card-content>
+									  <img mat-card-image src="assets/images/workflow-3.jpg">
 									</mat-card>
 							      <br>
 							      <div style="float:left;">
@@ -109,19 +103,19 @@
 									    <div mat-card-avatar class="example-header-image"></div>
 									    <mat-card-title>第五步：赴美治疗</mat-card-title>
 									  </mat-card-header>
-									  <img mat-card-image src="assets/images/workflow-5.jpg">
-									  <mat-card-content>
-									    <p>
-									      当客户顺利抵达美国之后，我们会提供各种服务以帮助客户顺利的融入到美国的生活并开始进行治疗。
-									    </p>
+									  <mat-card-content style="text-align: left;">
+										  <p>
+											  当您抵达美国波士顿之后，我们本地服务团队会帮助您尽快融入本地生活并开始进行治疗。
+										  </p>
 									  </mat-card-content>
+									  <img mat-card-image src="assets/images/workflow-5.jpg">
 									</mat-card>
 							      <br>
 							      <div style="float:left;">
 							      	<button mat-button matStepperPrevious><i class="material-icons">navigate_before</i>上一步</button>
 							      </div>
 							      <div style="float:right;">
-							        <button mat-button matStepperNext>下一步 <i class="material-icons">navigate_next</i></button>
+							        <button mat-button matStepperNext>下一步<i class="material-icons">navigate_next</i></button>
 							      </div>
 							  </mat-step>
 							  <mat-step [stepControl]="formGroup">
@@ -129,14 +123,14 @@
 							      <mat-card class="example-card">
 									  <mat-card-header>
 									    <div mat-card-avatar class="example-header-image"></div>
-									    <mat-card-title>回国随访</mat-card-title>
+									    <mat-card-title>第六步：回国随访</mat-card-title>
 									  </mat-card-header>
-									  <img mat-card-image src="assets/images/workflow-6.jpg">
-									  <mat-card-content>
-									    <p>
-									      在治疗结束之后，我们会继续跟进客户，确认病情的进展。
-									    </p>
+									  <mat-card-content style="text-align: left;">
+										  <p>
+											  在治疗结束之后，我们会继续跟您保持联络，跟进您的病情。
+										  </p>
 									  </mat-card-content>
+									  <img mat-card-image src="assets/images/workflow-6.jpg">
 									</mat-card>
 							      <br>
 							      <div style="float:left;">

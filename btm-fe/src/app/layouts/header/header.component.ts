@@ -19,6 +19,7 @@ export class HeaderComponent implements OnInit {
   @HostListener("window:scroll", [])
   onWindowScroll() {
     const offset = this.window.pageYOffset || this.document.documentElement.scrollTop || this.document.body.scrollTop || 0;
+    // this.isFixed = true;
     if(offset > 10) {
       this.isFixed = true
     } else {

@@ -1,21 +1,53 @@
 <header id="main-header" [ngClass]="{'header-fixed': isFixed}">
     <div class="container" fxLayout="row" fxLayoutWrap="wrap" fxLayoutAlign="start center">
         <div class="header-mobile-top" fxLayout="row" fxLayoutWrap="wrap" fxLayoutAlign="start center">
+            <!--<div class="home-logo mr-1">-->
+            <!--&lt;!&ndash;<div style="display: flex; align-items: center; justify-content: center; margin:2px auto;">&ndash;&gt;-->
+                <!--<div style="display: flex; align-items: center; justify-content: center; margin:2px auto;">-->
+                    <!--<a href="/">-->
+                    <!--<img src="assets/images/logo.png" alt="" height = "40px" >-->
+                    <!--</a>-->
+                <!--</div>-->
+            <!--</div>-->
             <div class="home-logo mr-1">
-                <a href="/">
-                    <h2>Boston TopMed  波士顿托普医疗 </h2>
-                </a>
+                <!--<div><img src="assets/images/logo.png" alt="">-->
+                    <!--<link rel="icon" type="image/x-icon" href="assets/images/logo.ico">-->
+                    <!---->
+                <!--</div>-->
+                <!--<div >-->
+                        <!--&lt;!&ndash;<div class="navbar-brand">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<a class="navbar-item">&ndash;&gt;-->
+                        <!--&lt;!&ndash;<img src="assets/images/logo.png">&ndash;&gt;-->
+                        <!--<div class="home-logo"><img src="assets/images/logo.png" alt=""></div>-->
+                <!--</div>-->
+                <div style="display: flex; justify-content: center; margin:10px auto; text-align: center;">
+                    <img src="assets/images/logo.png" alt="" height = "42px" >
+                </div>
+                <div style="width: 10px;"></div>
+                <div style="display: flex; justify-content: center; text-align: center;">
+                    <a href="/"><h2 >波士顿托普医疗</h2></a>
+                </div>
             </div>
             <button mat-icon-button id="menu-toggle" (click)="toggleMenu()"><mat-icon>menu</mat-icon></button>
         </div>
 
         <div fxFlex fxLayoutAlign="end" class="top-menu">
 
-            <button mat-button id="dashboard-topbtn" class="hometop-btn" scrollTo="intro-one-section"><strong>首页</strong></button>
-            <button mat-button id="dashboard-topbtn" class="hometop-btn" scrollTo="feature-section"><strong>特色</strong></button>
-            <button mat-button id="dashboard-topbtn" class="hometop-btn" scrollTo="portfolio-section"><strong>合作</strong></button>
-            <button mat-button id="dashboard-topbtn" class="hometop-btn" scrollTo="service-section"><strong>服务</strong></button>
-            <button mat-button id="dashboard-topbtn" class="hometop-btn" scrollTo="testimonial-slider"><strong>流程</strong></button>
+            <button mat-button id="dashboard-topbtn" class="hometop-btn" scrollTo="intro-one-section" (click)="toggleMenu()">
+                <strong>首页</strong>
+            </button>
+            <button mat-button id="dashboard-topbtn" class="hometop-btn" scrollTo="feature-section" (click)="toggleMenu()">
+            <strong>特色</strong>
+            </button>
+            <button mat-button id="dashboard-topbtn" class="hometop-btn" scrollTo="portfolio-section" (click)="toggleMenu()" >
+            <strong>合作</strong>
+            </button>
+            <button mat-button id="dashboard-topbtn" class="hometop-btn" scrollTo="service-section" (click)="toggleMenu()">
+                <strong>服务</strong>
+            </button>
+            <button mat-button id="dashboard-topbtn" class="hometop-btn" scrollTo="testimonial-slider" (click)="toggleMenu()">
+                <strong>流程</strong>
+            </button>
         </div>
     </div>
 </header>
