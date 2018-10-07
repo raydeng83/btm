@@ -2,7 +2,7 @@ import {Component, OnInit, Input} from '@angular/core';
 import {FormGroup, FormBuilder, Validators} from '@angular/forms';
 import {ContactService} from '../../shared/services/contact.service';
 import {Message} from '../../shared/models/message';
-import {NotificationsService} from 'angular2-notifications';
+import {NotificationsService, NotificationType} from 'angular2-notifications';
 
 @Component({
     selector: 'app-contact',
@@ -29,6 +29,7 @@ export class ContactComponent implements OnInit {
 
         let title = '消息已发送';
         let type = 'success';
+        // @ts-ignore
         this.notificationService.create(title, content, type, {
             timeOut: 6000,
             showProgressBar: true,
