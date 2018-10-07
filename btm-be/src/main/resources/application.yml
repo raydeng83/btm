@@ -2,7 +2,7 @@ spring.datasource.platform: "mysql"
 #spring.jpa.show-sql: "true"
 spring.database.driverClassName: "com.mysql.jdbc.Driver"
 
-spring.datasource.url: "jdbc:mysql://127.0.0.1:3306/btm"
+spring.datasource.url: "jdbc:mysql://127.0.0.1:3306/btm?useUnicode=yes&characterEncoding=UTF-8"
 spring.datasource.username: "root"
 spring.datasource.password: "Rochester24"
 spring.datasource.testWhileIdle: "true"
