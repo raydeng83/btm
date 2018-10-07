@@ -3,13 +3,13 @@ import { HomeComponent } from './layouts/home/home.component';
 
 
 export const rootRouterConfig: Routes = [
-  { 
-    path: '', 
-    redirectTo: 'home', 
-    pathMatch: 'full' 
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
   },
-  { 
-    path: 'home', 
+  {
+    path: 'home',
     component: HomeComponent
   }
 ];

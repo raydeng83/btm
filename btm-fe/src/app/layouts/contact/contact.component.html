@@ -1,45 +1,59 @@
-<section id="contact-section" class="gap bg-grey">
+<section id="contact-section" class="gap bg-grey ">
     <div class="container">
         <div fxLayout='column' class="text-center mb-5">
             <div fxFlex.gt-md="60%">
-                <h2 class="title-page">Write Us A Line</h2>
-                <p class="lead w-60"> Consectetur adipisicing elit. Velit id error rem qui. Neque aperiam saepe placeat vero reprehenderit. </p>
+                <h2 class="title-page">联系我们</h2>
+                <p class="lead w-60"> 您可以在这里发送消息跟我们取得联系，我们会尽快回复你的来信。 </p>
             </div>
         </div>
-        <form [formGroup]="contactForm">
+        <form [formGroup]="contactForm" (ngSubmit)="onSendMessage(); contact.reset(); " #contact="ngForm">
             <div fxLayout="row" fxLayout.lt-md="column" fxLayoutWrap="wrap">
                 <div fxFlex="100">
                     <div class="pb-1">
                         <mat-form-field class="full-width">
-                            <input matInput name="name" [formControl]="contactForm.controls['name']" placeholder="Your Name">
+                            <input matInput name="name" [formControl]="contactForm.controls['name']" placeholder="您的姓名" [(ngModel)]="message.name"
+                                   >
                         </mat-form-field>
-                        <small *ngIf="contactForm.controls.name.touched && contactForm.controls.name.errors?.required" class="form-error-msg">*Required</small>
+                        <small *ngIf="contactForm.controls.name.touched && contactForm.controls.name.errors?.required"
+                               class="form-error-msg">*姓名不能为空
+                        </small>
                     </div>
                     <div class="pb-1">
                         <mat-form-field class="full-width">
-                            <input matInput name="email" [formControl]="contactForm.controls['email']" placeholder="Your Email">
+                            <input matInput name="email" [formControl]="contactForm.controls['email']"
+                                   placeholder="您的电子邮箱" [(ngModel)]="message.email">
                         </mat-form-field>
-                        <small *ngIf="contactForm.controls.email.touched && contactForm.controls.email.errors?.email" class="form-error-msg">*Invalid Address</small>
+                        <small *ngIf="contactForm.controls.email.touched && contactForm.controls.email.errors?.email"
+                               class="form-error-msg">*请正确填写您的电子邮箱
+                        </small>
                     </div>
 
                 </div>
                 <div fxFlex="100">
                     <div class="pb-1">
                         <mat-form-field class="full-width">
-                            <input matInput name="subject" [formControl]="contactForm.controls['subject']" placeholder="Subject">
+                            <input matInput name="subject" [formControl]="contactForm.controls['subject']"
+                                   placeholder="标题" [(ngModel)]="message.title">
                         </mat-form-field>
-                        <small *ngIf="contactForm.controls.subject.touched && contactForm.controls.subject.errors?.required" class="form-error-msg">*Required</small>
+                        <small *ngIf="contactForm.controls.subject.touched && contactForm.controls.subject.errors?.required"
+                               class="form-error-msg">*标题不能为空
+                        </small>
                     </div>
                     <div class="pb-1">
                         <mat-form-field class="full-width">
-                            <textarea matInput row="8" name="message" [formControl]="contactForm.controls['message']" placeholder="Message"></textarea>
+                            <textarea matInput row="8" name="message" [formControl]="contactForm.controls['message']"
+                                      placeholder="消息内容" [(ngModel)]="message.content"></textarea>
                         </mat-form-field>
-                        <small *ngIf="contactForm.controls.message.touched && contactForm.controls.message.errors?.required" class="form-error-msg">*Required</small>
+                        <small *ngIf="contactForm.controls.message.touched && contactForm.controls.message.errors?.required"
+                               class="form-error-msg">*消息内容不能为空
+                        </small>
                     </div>
                 </div>
 
-                <div fxFlex="100"> <button mat-raised-button mat-lg-button color="accent">Send Us</button>
+                <div fxFlex="100">
+                    <button mat-raised-button mat-button color="primary" type="submit" [disabled]="!contact.form.valid">发送</button>
                 </div>
+                <simple-notifications></simple-notifications>
             </div>
         </form>
     </div>
